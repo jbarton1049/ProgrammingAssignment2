@@ -26,7 +26,7 @@ makeCacheMatrix <- function(x = matrix()) {
           ix <<- NULL          #store NULL in ix object of parent environment
      }
      get <- function() x
-     setinv <- function(inv) ix <<- solve(x)    #do initial calculation of inverse and store in ix object of parent environment
+     setinv <- function(inv) ix <<- inv    
      getinv <- function() ix
      list(set = set, get = get,          #return a list to the function
           setinv = setinv,
